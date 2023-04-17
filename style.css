@@ -8,6 +8,11 @@
     src: url(/GT-America-Compressed-Bold-Trial.otf);
 }
 
+@font-face {
+    font-family: america-cond;
+    src: url(/GT-America-Compressed-Ultra-Light-Trial.otf);
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -25,6 +30,10 @@ html,body{
     height: 100%;
 }
 
+#main{
+    overflow: hidden;
+}
+
 #nav-bar{
     width: 100%;
     position: fixed;
@@ -35,15 +44,18 @@ html,body{
     padding: 10px 20px;
 }
 
-#nav-bar a{
+#nav-bar h3{
     font-size: 24px;
     font-family: america-b;
     text-decoration: none;
     color: #C45508;
     position: relative;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-#nav-bar a::after{
+
+#nav-bar h3::after{
     content: '';
     position: absolute;
     left: 0;
@@ -57,7 +69,7 @@ html,body{
     transition: transform .3s;
 }
 
-#nav-bar a:hover::after{
+#nav-bar h3:hover::after{
     transform-origin: left;
     transform: scaleX(1);
 }
@@ -74,7 +86,7 @@ html,body{
     overflow: hidden;
 }
 
-#page1>svg{
+svg{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -82,11 +94,10 @@ html,body{
     z-index: 99;
 }
 
-#page1>#br>svg{
+#page1>#br{
     position: absolute;
-    width: 100%;
-    bottom: 2%;
-    right: 0%;
+    bottom: 12%;
+    right: 50%;
     color: #C45508;
 }
 
@@ -122,7 +133,7 @@ html,body{
 
 #scroll{
     text-align: center;
-    padding: 12px 22px;
+    padding: 12px 28px;
     color: white;
     text-transform: uppercase;
     font-family: america-b;
@@ -135,8 +146,12 @@ html,body{
 
 #page2{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
+}
+
+#page2 h1 span{
+    font-family: america-b;
 }
 
 #page2 h1{
@@ -149,4 +164,159 @@ html,body{
     color: #111;
     background-color: #fff;
     font-family: america-b;
+    position: relative;
+}
+
+#page2 h1::before{
+    content: "THE REPRESENTATION YOU DESERVE";
+    width: 12%;
+    text-align: left;
+    font-size: 1vw;
+    line-height: 1vw;
+    word-spacing: 0.1px;
+    letter-spacing: 1px;
+    font-family: gilroy;
+    font-weight: 500;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+#page2 h1::after{
+    content: "ONE OF AMERICA'S BEST BROKERAGES";
+    width: 12%;
+    text-align: left;
+    font-size: 1vw;
+    line-height: 1vw;
+    word-spacing: 0.1px;
+    letter-spacing: 1px;
+    font-family: gilroy;
+    font-weight: 500;
+    position: absolute;
+    bottom: 10%;
+    right: 8%;
+}
+
+#page2>#ranches{
+    height: 900px;
+    position: relative;
+    left: 28vw;
+    top: -25vh;
+    rotate: -5deg;
+}
+
+#page2>#stamp{
+    width: 120px;
+    position: absolute;
+    top: 35%;
+    left: 74%;
+    transform: translate(-50%,-50%);
+}
+
+#page2 h2{
+    font-size: 13vw;
+    font-family: america-b;
+    line-height: 9.7vw;
+    word-spacing: -13px;
+    letter-spacing: -4px;
+    text-align: center;
+    position: relative;
+    top: -20vh;
+    z-index: 9;
+}
+
+#page2 h2::after{
+    content: "THIRD GENERATION FAMILY-OWNED RANCH BROKERAGE";
+    font-family: gilroy;
+    font-size: 1vw;
+    font-weight: 500;
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translate(-50%,0);
+    letter-spacing: 0px;
+    word-spacing: 1px;
+}
+
+#page3{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #111;
+    color: #fff;
+    padding: 0px 130px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#overlay2{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#page3 h1{
+    font-size: 8vw;
+    text-transform: uppercase;
+    word-spacing: -5px;
+    font-family: america-b;
+    line-height: 13vh;
+    text-align: center;
+}
+
+#page3 h2{
+    font-size: 8vw;
+    text-transform: uppercase;
+    margin-right: 20px;
+    letter-spacing: -1px;
+    font-family: america-cond;
+}
+
+#page3 p{
+    font-size: 1vw;
+    width: 39%;
+    text-align: center;
+    word-spacing: 0px;
+    font-family: america;
+}
+
+#meet-your-broker{
+    width: 160px;
+    height: 130px;
+    position: absolute;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+}
+
+#upper{
+    background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/d3370821d518e13fd16b439a1fb420c72e416641-581x383.png/brandon_bownds.png?rect=0,30,581,325&bg=F2F1EC&w=320&h=179&fit=min&auto=format);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 70%;
+}
+
+#lower{
+    width: 100%;
+    height: 30%;
+    background-color: #fff;
+    color: #111;
+    font-family: america-cond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lower h1{
+    font-size: 1vw;
+    word-spacing: 0px;
+}
+
+#page4{
+    width: 100vw;
+    height: 100vh;
+    background-color: #dadada;
 }
