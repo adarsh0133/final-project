@@ -40,7 +40,7 @@ function init() {
 
 }
 
-init()
+init();
 
 var overlay = document.querySelector("#overlay");
 var iscroll = document.querySelector("#scroll");

@@ -1,16 +1,16 @@
 @font-face {
     font-family: america;
-    src: url(/GT-America-Standard-Regular-Trial.otf);
+    src: url(/GT-America-Standard-Regular-Trial.ttf);
 }
 
 @font-face {
     font-family: america-b;
-    src: url(/GT-America-Compressed-Bold-Trial.otf);
+    src: url(/GT-America-Compressed-Bold-Trial.ttf);
 }
 
 @font-face {
     font-family: america-cond;
-    src: url(/GT-America-Compressed-Ultra-Light-Trial.otf);
+    src: url(/GT-America-Compressed-Ultra-Light-Trial.ttf);
 }
 
 *{
